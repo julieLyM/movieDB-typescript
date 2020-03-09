@@ -50,6 +50,7 @@ export default class Home extends Component<IProps, IState> {
           display: 'flex',
           flexDirection: 'column',
           backgroundColor: 'black',
+          fontSize: '18px',
         }}
       >
         <div

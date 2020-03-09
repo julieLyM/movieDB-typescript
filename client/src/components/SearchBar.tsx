@@ -78,7 +78,7 @@ export default class SearchBar extends Component<{}, IState> {
             backgroundColor: 'white',
           }}
         >
-          <p>
+          <div>
             {searchRes.map((element: ISearchResults, i) => (
               <ContainerSearchRes key={i}>
                 <Link to={`/MovieDetail/${element.id}`}>
@@ -93,7 +93,7 @@ export default class SearchBar extends Component<{}, IState> {
                 </Link>
               </ContainerSearchRes>
             ))}
-          </p>
+          </div>
         </div>
       </ContainerSearchBar>
     );

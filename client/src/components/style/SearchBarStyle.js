@@ -9,17 +9,18 @@ export const ContainerSearchBar = styled.div`
 export const InputSearchBar = styled.input`
   width: 360px;
   height: 50px;
-  font-size: 16px;
+  font-size: 22px;
   @media (${device.mobileL}) {
     width: 50%;
+    font-size: 18px;
   }
 `;
 
 export const ContainerSearchRes = styled.div`
   display: flex;
   justifycontent: flex-start;
-  font-size: 14px;
-  a {
+  font-size: 18px;
+  && a {
     color: black;
     text-decoration: none;
   }
