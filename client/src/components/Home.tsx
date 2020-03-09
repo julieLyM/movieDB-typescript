@@ -52,8 +52,6 @@ export default class Home extends Component<IProps, IState> {
           backgroundColor: 'black',
         }}
       >
-
-
         <div
           style={{
             display: 'flex',

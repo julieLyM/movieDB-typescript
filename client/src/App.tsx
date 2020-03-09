@@ -11,8 +11,8 @@ export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Route exact path="/" component={Home} />
         <Route path="/" render={() => <Header />} />
+        <Route exact path="/" component={Home} />
         <Route path="/MovieDetail/:movieId" component={MovieDetail} />
         <Route path="/MovieDetail/:movieId/credits" component={Credits} />
         <Route path="/character/:characterId" component={Character} />

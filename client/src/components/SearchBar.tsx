@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { searchMovie } from '../service/dataMovies';
 import { Link } from 'react-router-dom';
 import debounce from 'lodash.debounce';
+import {
+  InputSearchBar,
+  ContainerSearchBar,
+  ContainerSearchRes,
+} from './style/SearchBarStyle';
 
 interface ISearchResults {
   poster_path?: string;
@@ -62,12 +67,11 @@ export default class SearchBar extends Component<{}, IState> {
   render() {
     const { searchRes } = this.state;
     return (
-      <div style={{ margin: '0 auto', position: 'relative' }}>
-        <input
+      <ContainerSearchBar>
+        <InputSearchBar
           onChange={this.myHandlerChange}
           placeholder="search movie"
-          style={{ width: '360px', height: '50px' }}
-        />
+        ></InputSearchBar>
         <div
           style={{
             position: 'absolute',
@@ -76,14 +80,7 @@ export default class SearchBar extends Component<{}, IState> {
         >
           <p>
             {searchRes.map((element: ISearchResults, i) => (
-              <div
-                key={i}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'flex-start',
-                  width: '350px',
-                }}
-              >
+              <ContainerSearchRes key={i}>
                 <Link to={`/MovieDetail/${element.id}`}>
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <img
@@ -94,11 +91,11 @@ export default class SearchBar extends Component<{}, IState> {
                     {element.title}
                   </div>
                 </Link>
-              </div>
+              </ContainerSearchRes>
             ))}
           </p>
         </div>
-      </div>
+      </ContainerSearchBar>
     );
   }
 }
