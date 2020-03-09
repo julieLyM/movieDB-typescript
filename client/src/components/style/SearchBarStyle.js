@@ -11,7 +11,7 @@ export const InputSearchBar = styled.input`
   height: 50px;
   font-size: 22px;
   @media (${device.mobileL}) {
-    width: 50%;
+    width: 100%;
     font-size: 18px;
   }
 `;
@@ -25,6 +25,6 @@ export const ContainerSearchRes = styled.div`
     text-decoration: none;
   }
   @media (${device.mobileL}) {
-    width: 30%;
+    width: 50%;
   }
 `;
