@@ -47,6 +47,7 @@ export default class Credits extends Component<IProps, IState> {
           flexWrap: 'wrap',
           justifyContent: 'center',
           backgroundColor: 'black',
+          maxHeight: '100%',
         }}
       >
         {credits.map((element, i) => (

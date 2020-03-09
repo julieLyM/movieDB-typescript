@@ -6,7 +6,7 @@ export const ContainerHeader = styled.div`
   background-color: black;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8%;
+  padding: 0 10%;
 
   @media (${device.tablet}) {
     flex-direction: column;

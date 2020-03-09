@@ -78,23 +78,30 @@ export default class SearchBar extends Component<{}, IState> {
             backgroundColor: 'white',
           }}
         >
-          <div>
-            {searchRes.map((element: ISearchResults, i) => (
-              <ContainerSearchRes key={i}>
-                <Link to={`/MovieDetail/${element.id}`}>
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <img
-                      src={`https://image.tmdb.org/t/p/w200/${element.poster_path}`}
-                      alt="search movie or actor"
-                      style={{ width: '50px', margin: '10px' }}
-                    />
-                    {element.title}
-                  </div>
-                </Link>
-              </ContainerSearchRes>
-            ))}
-          </div>
+          {searchRes.map((element: ISearchResults, i) => (
+            <ContainerSearchRes key={i}>
+              <Link to={`/MovieDetail/${element.id}`}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w200/${element.poster_path}`}
+                    alt="search movie or actor"
+                    style={{ width: '50px', margin: '10px' }}
+                  />
+                  {element.title}
+                </div>
+              </Link>
+            </ContainerSearchRes>
+          ))}
         </div>
+        <button
+          style={{
+            position: 'relative',
+            backgroundColor: 'white',
+          }}
+          onClick={this.clearSearchBar}
+        >
+          clear
+        </button>
       </ContainerSearchBar>
     );
   }

@@ -55,6 +55,7 @@ export default class Character extends Component<IProps, IState> {
           backgroundColor: 'black',
           color: 'white',
           padding: '10px',
+          maxHeight: '100%',
         }}
       >
         <h1>{name}</h1>
